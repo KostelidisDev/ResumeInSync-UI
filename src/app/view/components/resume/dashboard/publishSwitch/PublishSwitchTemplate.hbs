@@ -1,0 +1,16 @@
+<div class="col pull-right">
+  <div class="btn disabled">
+    {{ getLangString "resume.dashboard.publishStatus" }}
+  </div>
+</div>
+
+<div class="col pull-left">
+  <div class="publish-switch">
+    <input type="checkbox" name="publish-switch" class="publish-switch-checkbox" id="publish-switch" 
+    {{#if published}}checked{{/if}}>
+    <label class="publish-switch-label" for="publish-switch">
+      <span class="publish-switch-inner"></span>
+      <span class="publish-switch-switch"></span>
+    </label>
+  </div>
+</div>

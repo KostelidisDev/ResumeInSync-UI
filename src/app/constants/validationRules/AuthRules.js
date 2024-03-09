@@ -1,0 +1,29 @@
+'use strict'
+
+export const USERNAME_MIN = 4
+export const USERNAME_MAX = 16
+
+export const EMAIL_MIN = 5
+export const EMAIL_MAX = 40
+
+export const FIRST_NAME_MIN = 3
+export const FIRST_NAME_MAX = 40
+
+export const LAST_NAME_MIN = 3
+export const LAST_NAME_MAX = 40
+
+export const PASSWORD_MIN = 8
+export const PASSWORD_MAX = 32
+
+export default {
+  USERNAME_MIN: USERNAME_MIN,
+  USERNAME_MAX: USERNAME_MAX,
+  EMAIL_MIN: EMAIL_MIN,
+  EMAIL_MAX: EMAIL_MAX,
+  FIRST_NAME_MIN: FIRST_NAME_MIN,
+  FIRST_NAME_MAX: FIRST_NAME_MAX,
+  LAST_NAME_MIN: LAST_NAME_MIN,
+  LAST_NAME_MAX: LAST_NAME_MAX,
+  PASSWORD_MIN: PASSWORD_MIN,
+  PASSWORD_MAX: PASSWORD_MAX
+}

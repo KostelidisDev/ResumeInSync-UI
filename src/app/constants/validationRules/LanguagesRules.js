@@ -1,0 +1,9 @@
+'use strict'
+
+export const LANGUAGES_NAME_MIN = 1
+export const LANGUAGES_NAME_MAX = 40
+
+export default {
+  LANGUAGES_NAME_MIN: LANGUAGES_NAME_MIN,
+  LANGUAGES_NAME_MAX: LANGUAGES_NAME_MAX,
+}

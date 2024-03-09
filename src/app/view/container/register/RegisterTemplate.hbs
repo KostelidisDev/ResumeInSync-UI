@@ -1,0 +1,46 @@
+<div class="col-xs-12">
+  <div class="h1 text-center">
+    {{ getLangString "auth.register" }}
+  </div>
+</div>
+
+<div class="col-xs-12">
+  <hr />
+</div>
+
+<div class="col-xs-12">
+  <form id="registerForm">
+    <div class="form-group">
+      <label for="firstName">{{ getLangString "auth.firstName" }}</label>
+      <input type="text" class="form-control" name="firstName" id="firstName" aria-describedby="firstNameHelp"
+        placeholder="{{ getLangString "auth.example.firstName" }}">
+    </div>
+    <div class="form-group">
+      <label for="lastName">{{ getLangString "auth.lastName" }}</label>
+      <input type="text" class="form-control" name="lastName" id="lastName" aria-describedby="lastNameHelp"
+        placeholder="{{ getLangString "auth.example.lastName" }}">
+    </div>
+
+    <div class="form-group">
+      <label for="username">{{ getLangString "auth.username" }}</label>
+      <input type="text" class="form-control" name="username" id="username" aria-describedby="usernameHelp"
+        placeholder="{{ getLangString "auth.example.username" }}">
+    </div>
+    <div class="form-group">
+      <label for="email">{{ getLangString "auth.email" }}</label>
+      <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+        placeholder="{{ getLangString "auth.example.email" }}">
+    </div>
+    <div class="form-group">
+      <label for="password">{{ getLangString "auth.password" }}</label>
+      <input type="password" class="form-control" name="password" id="password" placeholder="{{ getLangString "auth.example.password" }}">
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button id="register" type="submit" class="btn btn-success register">{{ getLangString
+          "auth.register" }}</button>
+        <button id="login" type="button" class="btn btn-primary login">{{ getLangString "auth.login" }}</button>
+      </div>
+    </div>
+  </form>
+</div>

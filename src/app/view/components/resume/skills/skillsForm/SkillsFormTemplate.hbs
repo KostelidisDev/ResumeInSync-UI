@@ -1,0 +1,18 @@
+<div class="col-xs-12 ">
+  <form id="skillForm">
+    <div class="form-group">
+      <label for="name">{{ getLangString "resume.skills.name" }}</label>
+      <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" value="{{ name }}"
+        placeholder="{{ getLangString "resume.skills.nameExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="description">{{ getLangString "resume.skills.description" }}</label>
+      <input type="text" class="form-control" name="description" id="description" aria-describedby="descriptionHelp"
+        value="{{ description }}" placeholder="{{ getLangString "resume.skills.descriptionExample" }}">
+    </div>
+    <div class="form-group">
+      <label>{{ getLangString "resume.importSource" }}</label>
+      <div>{{ importSource }}</div>
+    </div>
+  </form>
+</div>

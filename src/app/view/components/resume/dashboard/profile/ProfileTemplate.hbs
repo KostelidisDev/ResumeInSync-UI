@@ -1,0 +1,37 @@
+<div class="col-md-6 col-sm-12">
+  <div class="row">
+    <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12">
+      <div class="avatarRegion text-center"></div>
+    </div>
+    <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12">
+      <div class="row">
+          <div class="col-12">
+            <div class="text-center">
+              <span class="h4">
+                {{firstName}} {{lastName}}
+              </span> <br />
+              <span class="h5">
+                {{bio}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 col-sm-12">
+    <div class="text-center">
+        <a href="/#/resumes/{{user.id}}" target="_blank">
+        <i class="fa fa-globe"></i>
+        <span class="badge badge-info">{{getLangString "resume.dashboard.profile"}}</span> <br />
+      </a>
+      <i class="fa fa-phone"></i>
+      <span class="badge badge-info">{{mobilePhone}}</span> <br />
+      <i class="fa fa-home"></i>
+      <span class="badge badge-info">{{landPhone}}</span> <br />
+      <i class="fa fa-fax"></i>
+      <span class="badge badge-info">{{fax}}</span>
+    </div>
+</div>

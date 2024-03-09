@@ -1,0 +1,10 @@
+'use strict'
+
+import './controller/LocalStorageController'
+import './controller/SecurityController'
+import './controller/TimeController'
+import './controller/UserController'
+import './controller/DashboardController'
+import './controller/ProfileController'
+import './controller/ResumeController'
+import './controller/LanguageProficiencyController'

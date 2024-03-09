@@ -1,0 +1,31 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~selectize/dist/css/selectize.css";
+@import "~flexboxgrid/dist/flexboxgrid.min.css";
+@import "./NavigationBar.css";
+@import "./CardCounter.css";
+@import "./PublishSwitch.css";
+
+.mainRegion {
+  margin: 20px 20px 0 20px;
+}
+
+.dashboard-selected-item {
+  background-color: #00000099;
+  color: white;
+}
+
+.dashboard-profile {
+  margin: 12px;
+  border-radius: 4px;
+  padding: 10px;
+  color: white;
+}
+
+.dashboard-profile > div > div > a > i.fa {
+  color: white;
+}
+
+.previewList > tr.text-center > td {
+  vertical-align: middle;
+}

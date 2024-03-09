@@ -1,0 +1,45 @@
+<div class="col-xs-12 ">
+  <form id="certificationsForm">
+    <div class="form-group">
+      <label for="name">{{ getLangString "resume.certifications.name" }}</label>
+      <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" value="{{ name }}"
+        placeholder="{{ getLangString "resume.certifications.nameExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="organization">{{ getLangString "resume.certifications.organization" }}</label>
+      <input type="text" class="form-control" name="organization" id="organization" aria-describedby="organizationHelp"
+        value="{{ organization }}" placeholder="{{ getLangString "resume.certifications.organizationExample" }}">
+    </div>
+    <div class="form-group">
+      <label class="checkbox-inline">
+        {{ getLangString "resume.certifications.canExpire" }}
+        <input type="checkbox" id="canExpire" aria-describedby="canExpireHelp" {{#if canExpire}}checked{{/if}}></label>
+    </div>
+    <div class="form-group">
+      <label for="startDate">{{ getLangString "resume.certifications.startDate" }}</label>
+      <input type="date" class="form-control" name="startDate" id="startDate" aria-describedby="startDateHelp"
+        value="{{ formattedDateRange.startDate }}" placeholder="{{ getLangString "
+        resume.certifications.startDateExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="endDate">{{ getLangString "resume.certifications.endDate" }}</label>
+      <input type="date" class="form-control" name="endDate" id="endDate" aria-describedby="endDateHelp"
+        value="{{ formattedDateRange.endDate }}" placeholder="{{ getLangString "resume.certifications.endDateExample"
+        }}">
+    </div>
+    <div class="form-group">
+      <label for="originalId">{{ getLangString "resume.certifications.originalId" }}</label>
+      <input type="text" class="form-control" name="originalId" id="originalId" aria-describedby="originalIdHelp"
+        value="{{ originalId }}" placeholder="{{ getLangString "resume.certifications.originalIdExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="originalUrl">{{ getLangString "resume.certifications.originalUrl" }}</label>
+      <input type="text" class="form-control" name="originalUrl" id="originalUrl" aria-describedby="originalUrlHelp"
+        value="{{ originalUrl }}" placeholder="{{ getLangString "resume.certifications.originalUrlExample" }}">
+    </div>
+    <div class="form-group">
+      <label>{{ getLangString "resume.importSource" }}</label>
+      <div>{{ importSource }}</div>
+    </div>
+  </form>
+</div>

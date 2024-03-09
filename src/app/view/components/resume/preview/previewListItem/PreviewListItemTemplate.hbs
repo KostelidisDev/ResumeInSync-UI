@@ -1,0 +1,32 @@
+<td class="d-none d-lg-table-cell">
+  <a href="#/resumes/{{user.id}}">
+    {{ firstName }} {{ lastName }}
+  </a>
+</td>
+<td class="d-none d-lg-table-cell">
+  <div>
+    {{ bio }}
+    </div>
+</td>
+<td class="d-none d-lg-table-cell">
+  <div class="btn-group">
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      {{ getLangString "resume.dashboard.downloadResume" }}
+    </button>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+      <button class="dropdown-item" id="downloadPdf">PDF</button>
+      <button class="dropdown-item" id="downloadJson">JSON</button>
+      <button class="dropdown-item" id="downloadHtml">HTML</button>
+      <button class="dropdown-item" id="getHtmlIFrame">HTML iFrame URL</button>
+    </div>
+  </div>
+</td>
+
+<td class="d-lg-none">
+  <a href="#/resumes/{{user.id}}">
+    {{ firstName }} {{ lastName }}
+  </a>
+  <br />
+  {{ bio }}
+</td>

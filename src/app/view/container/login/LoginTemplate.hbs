@@ -1,0 +1,33 @@
+<div class="col-xs-12">
+  <div class="h1 text-center">
+    {{ getLangString "auth.login" }}
+  </div>
+</div>
+
+<div class="col-xs-12">
+  <hr />
+</div>
+
+<div class="col-xs-12 ">
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="username">{{ getLangString "auth.username" }}</label>
+      <input type="text" class="form-control" name="username" id="username" aria-describedby="usernameHelp"
+        placeholder="{{ getLangString "auth.example.username" }}">
+    </div>
+    <div class="form-group">
+      <label for="password">{{ getLangString "auth.password" }}</label>
+      <input type="password" class="form-control" name="password" id="password" placeholder="{{ getLangString "auth.example.password" }}">
+    </div>
+    <div class="col-xs-12">
+      <div class="col-xs-6 pull-left">
+      </div>
+      <div class="col-xs-6 pull-right">
+        <div class="btn-group">
+          <button id="login" type="submit" class="btn btn-success">{{ getLangString "auth.login" }}</button>
+          <button id="register" type="button" class="btn btn-primary">{{ getLangString "auth.register" }}</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

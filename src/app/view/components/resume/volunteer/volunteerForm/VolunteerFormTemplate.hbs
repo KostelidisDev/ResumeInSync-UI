@@ -1,0 +1,46 @@
+<div class="col-xs-12 ">
+  <form id="volunteerForm">
+    <div class="form-group">
+      <label for="role">{{ getLangString "resume.experiences.volunteer.role" }}</label>
+      <input type="text" class="form-control" name="role" id="role" aria-describedby="roleHelp" value="{{ role }}"
+        placeholder="{{ getLangString "resume.experiences.volunteer.roleExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="description">{{ getLangString "resume.experiences.volunteer.description" }}</label>
+      <input type="text" class="form-control" name="description" id="description" aria-describedby="descriptionHelp"
+        value="{{ description }}" placeholder="{{ getLangString "resume.experiences.volunteer.descriptionExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="organization">{{ getLangString "resume.experiences.volunteer.organization" }}</label>
+      <input type="text" class="form-control" name="organization" id="organization" aria-describedby="organizationHelp"
+        value="{{ organization }}" placeholder="{{ getLangString "resume.experiences.volunteer.organizationExample"
+        }}">
+    </div>
+    <div class="form-group">
+      <label for="location">{{ getLangString "resume.experiences.volunteer.location" }}</label>
+      <input type="text" class="form-control" name="location" id="location" aria-describedby="locationHelp"
+        value="{{ location }}" placeholder="{{ getLangString "resume.experiences.volunteer.locationExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="startDate">{{ getLangString "resume.experiences.volunteer.startDate" }}</label>
+      <input type="date" class="form-control" name="startDate" id="startDate" aria-describedby="startDateHelp"
+        value="{{ formattedDateRange.startDate }}" placeholder="{{ getLangString "
+        resume.experiences.volunteer.startDateExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="endDate">{{ getLangString "resume.experiences.volunteer.endDate" }}</label>
+      <input type="date" class="form-control" name="endDate" id="endDate" aria-describedby="endDateHelp"
+        value="{{ formattedDateRange.endDate }}" placeholder="{{ getLangString "
+        resume.experiences.volunteer.endDateExample" }}">
+    </div>
+    <div class="form-group">
+      <label class="checkbox-inline">
+        {{ getLangString "resume.experiences.volunteer.currently" }}
+        <input type="checkbox" id="currently" aria-describedby="currentlyHelp" {{#if currently}}checked{{/if}}></label>
+    </div>
+    <div class="form-group">
+      <label>{{ getLangString "resume.importSource" }}</label>
+      <div>{{ importSource }}</div>
+    </div>
+  </form>
+</div>

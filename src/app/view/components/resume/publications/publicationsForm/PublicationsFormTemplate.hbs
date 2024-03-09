@@ -1,0 +1,39 @@
+<div class="col-xs-12 ">
+  <form id="publicationsForm">
+    <div class="form-group">
+      <label for="title">{{ getLangString "resume.publications.title" }}</label>
+      <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelp" value="{{ title }}"
+        placeholder="{{ getLangString "resume.publications.titleExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="publisher">{{ getLangString "resume.publications.publisher" }}</label>
+      <input type="text" class="form-control" name="publisher" id="publisher" aria-describedby="publisherHelp"
+        value="{{ publisher }}" placeholder="{{ getLangString "resume.publications.publisherExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="publicationDate">{{ getLangString "resume.publications.publicationDate" }}</label>
+      <input type="date" class="form-control" name="publicationDate" id="publicationDate"
+        aria-describedby="publicationDateHelp" value="{{ formattedPublicationDate }}" placeholder="{{ getLangString "
+        resume.publications.publicationDateExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="authors">{{ getLangString "resume.publications.authors" }}</label>
+      <input type="text" class="form-control" name="authors" id="authors" aria-describedby="authorsHelp"
+        value="{{ authors }}" placeholder="{{ getLangString "resume.publications.authorsExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="url">{{ getLangString "resume.publications.url" }}</label>
+      <input type="text" class="form-control" name="url" id="url" aria-describedby="urlHelp" value="{{ url }}"
+        placeholder="{{ getLangString "resume.publications.urlExample" }}">
+    </div>
+    <div class="form-group">
+      <label for="description">{{ getLangString "resume.publications.description" }}</label>
+      <textarea type="text" class="form-control" name="description" id="description" aria-describedby="descriptionHelp"
+        placeholder="{{ getLangString "resume.publications.descriptionExample" }}">{{description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label>{{ getLangString "resume.importSource" }}</label>
+      <div>{{ importSource }}</div>
+    </div>
+  </form>
+</div>

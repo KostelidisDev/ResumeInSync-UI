@@ -1,0 +1,34 @@
+'use strict'
+
+export const FIRST_NAME_MIN = 3
+export const FIRST_NAME_MAX = 40
+
+export const LAST_NAME_MIN = 3
+export const LAST_NAME_MAX = 40
+
+export const AVATAR_MIN = 1
+export const AVATAR_MAX = 1024
+
+export const MOBILE_PHONE_MIN = 1
+export const MOBILE_PHONE_MAX = 20
+
+export const LAND_PHONE_MIN = 1
+export const LAND_PHONE_MAX = 20
+
+export const FAX_MIN = 1
+export const FAX_MAX = 20
+
+export default {
+  FIRST_NAME_MIN: FIRST_NAME_MIN,
+  FIRST_NAME_MAX: FIRST_NAME_MAX,
+  LAST_NAME_MIN: LAST_NAME_MIN,
+  LAST_NAME_MAX: LAST_NAME_MAX,
+  AVATAR_MIN: AVATAR_MIN,
+  AVATAR_MAX: AVATAR_MAX,
+  MOBILE_PHONE_MIN: MOBILE_PHONE_MIN,
+  MOBILE_PHONE_MAX: MOBILE_PHONE_MAX,
+  LAND_PHONE_MIN: LAND_PHONE_MIN,
+  LAND_PHONE_MAX: LAND_PHONE_MAX,
+  FAX_MIN: FAX_MIN,
+  FAX_MAX: FAX_MAX
+}
