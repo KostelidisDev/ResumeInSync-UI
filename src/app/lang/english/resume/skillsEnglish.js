@@ -3,8 +3,6 @@
 export const SkillsEnglish = {
   'name': 'Name',
   'nameExample': 'eg JavaScript',
-  'description': 'Description',
-  'descriptionExample': 'eg React.js',
   'actions': 'Actions',
   'add': {
     'title': 'Add skill',
@@ -26,12 +24,6 @@ export const SkillsEnglish = {
       'length': {
         'min': 'Name must have at least {0} characters.',
         'max': 'Name must have at most {0} characters.',
-      },
-    },
-    'description': {
-      'length': {
-        'min': 'Description must have at least {0} characters.',
-        'max': 'Description must have at most {0} characters.',
       },
     },
   },

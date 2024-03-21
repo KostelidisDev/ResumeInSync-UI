@@ -9,9 +9,11 @@
       <label for="proficiency">{{ getLangString "resume.languages.proficiency" }}</label>
       <select class="proficiency" id="proficiency"></select>
     </div>
-    <div class="form-group">
-      <label>{{ getLangString "resume.importSource" }}</label>
-      <div>{{ importSource }}</div>
-    </div>
+    {{#if importSource}}
+      <div class="form-group">
+        <label>{{ getLangString "resume.importSource" }}</label>
+        <div>{{ importSource }}</div>
+      </div>
+    {{/if}}
   </form>
 </div>

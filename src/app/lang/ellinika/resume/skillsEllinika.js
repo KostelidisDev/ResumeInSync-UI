@@ -3,8 +3,6 @@
 export const SkillsEllinika = {
   'name': 'Όνομα',
   'nameExample': 'π.χ. JavaScript',
-  'description': 'Περιγραφή',
-  'descriptionExample': 'π.χ. React.js',
   'actions': 'Ενέργειες',
   'add': {
     'title': 'Προσθήκη ικανότητας',
@@ -26,12 +24,6 @@ export const SkillsEllinika = {
       'length': {
         'min': 'Το όνομα πρέπει να έχει τουλάχιστον {0} χαρακτήρες.',
         'max': 'Το όνομα πρέπει να έχει το πολύ {0} χαρακτήρες.',
-      },
-    },
-    'description': {
-      'length': {
-        'min': 'Η περιγραφή πρέπει να έχει τουλάχιστον {0} χαρακτήρες.',
-        'max': 'Η περιγραφή πρέπει να έχει το πολύ {0} χαρακτήρες.',
       },
     },
   },

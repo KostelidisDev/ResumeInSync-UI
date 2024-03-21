@@ -70,5 +70,11 @@ export const ResumeEnglish = {
   'importSource': 'Source of Data',
   'dateRange': {
     'currently': 'Currently'
+  },
+  'error': {
+    "pdf": "We can't download the PDF file. Maybe this resume isn't public.",
+    "html": "We can't download the HTML file. Maybe this resume isn't public.",
+    "json": "We can't download the JSON file. Maybe this resume isn't public.",
+    "iFrame": "We can't resolve the HTML iFrame URL. Maybe this resume isn't public."
   }
 }

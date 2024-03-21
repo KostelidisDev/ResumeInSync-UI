@@ -38,9 +38,11 @@
         {{ getLangString "resume.experiences.professional.currently" }}
         <input type="checkbox" id="currently" aria-describedby="currentlyHelp" {{#if currently}}checked{{/if}}></label>
     </div>
-    <div class="form-group">
-      <label>{{ getLangString "resume.importSource" }}</label>
-      <div>{{ importSource }}</div>
-    </div>
+    {{#if importSource}}
+      <div class="form-group">
+        <label>{{ getLangString "resume.importSource" }}</label>
+        <div>{{ importSource }}</div>
+      </div>
+    {{/if}}
   </form>
 </div>

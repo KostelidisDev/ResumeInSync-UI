@@ -31,9 +31,11 @@
       <textarea type="text" class="form-control" name="description" id="description" aria-describedby="descriptionHelp"
         placeholder="{{ getLangString "resume.publications.descriptionExample" }}">{{description}}</textarea>
     </div>
-    <div class="form-group">
-      <label>{{ getLangString "resume.importSource" }}</label>
-      <div>{{ importSource }}</div>
-    </div>
+    {{#if importSource}}
+      <div class="form-group">
+        <label>{{ getLangString "resume.importSource" }}</label>
+        <div>{{ importSource }}</div>
+      </div>
+    {{/if}}
   </form>
 </div>

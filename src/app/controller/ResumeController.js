@@ -15,6 +15,9 @@ const SecurityChannel = Radio.channel(Channels.SECURITY)
 const resumeChannel = Radio.channel(Channels.RESUME)
 
 export const downloadPdf = (profile) => {
+  if (profile?.attributes?.user === undefined) {
+    return Promise.reject("ERROR")
+  }
   const { attributes: { user: { id: userId } } } = profile
   return Promise.resolve(
     $.ajax(
@@ -35,6 +38,9 @@ export const downloadPdf = (profile) => {
 }
 
 export const downloadJson = (profile) => {
+  if (profile?.attributes?.user == undefined) {
+    return Promise.reject("ERROR")
+  }
   const { attributes: { user: { id: userId } } } = profile
 
   return Promise.resolve(
@@ -54,6 +60,9 @@ export const downloadJson = (profile) => {
 }
 
 export const downloadHtml = (profile) => {
+  if (profile?.attributes?.user == undefined) {
+    return Promise.reject("ERROR")
+  }
   const { attributes: { user: { id: userId } } } = profile
 
   return Promise.resolve(
@@ -71,6 +80,9 @@ export const downloadHtml = (profile) => {
 }
 
 export const getHtmlIFrame = (profile) => {
+  if (profile?.attributes?.user == undefined) {
+    return Promise.reject("ERROR")
+  }
   const { attributes: { user: { id: userId } } } = profile
 
   return Promise.resolve(resumeIFrameURLGenerator(userId))
@@ -78,7 +90,6 @@ export const getHtmlIFrame = (profile) => {
 }
 
 export const fetchHtml = (userId) => {
-
   return Promise.resolve(
     $.ajax(
       {

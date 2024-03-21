@@ -29,3 +29,16 @@
 .previewList > tr.text-center > td {
   vertical-align: middle;
 }
+
+.modal-header .close {
+  padding: unset;
+  margin: unset;
+}
+
+.modal-header {
+  display: unset;
+}
+
+.btn-group {
+  height: 2.5em;
+}

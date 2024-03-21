@@ -23,13 +23,10 @@ const SkillsFormView = RISView.extend({
 
     const name = this.$('#name')
       .val()
-    const description = this.$('#description')
-      .val()
 
     return {
       id,
       name,
-      description
     }
   },
 
@@ -67,10 +64,6 @@ const SkillsFormView = RISView.extend({
             required: true,
             minlength: SkillsRules.SKILLS_NAME_MIN,
             maxlength: SkillsRules.SKILLS_NAME_MAX,
-          },
-          description: {
-            minlength: SkillsRules.SKILLS_DESCRIPTION_MIN,
-            maxlength: SkillsRules.SKILLS_DESCRIPTION_MAX,
           },
         },
         messages: {
