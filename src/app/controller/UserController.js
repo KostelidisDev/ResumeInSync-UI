@@ -23,7 +23,7 @@ const changePassword = (payload) => {
   return Promise.resolve(payload)
     .then(payload => $.ajax({
       method: HTTPMethods.POST,
-      url: `${BackEngConfig.API_FULL_PATH}/auth/change-password`,
+      url: `${BackEngConfig.API_FULL_PATH}/rpc/auth/change-password`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': SecurityChannel.request(SecurityEvents.GET_BEARER_TOKEN)
