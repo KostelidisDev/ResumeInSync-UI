@@ -22,5 +22,5 @@ ENV API_APP_PASSWORD="resumeinsync_api_password"
 
 RUN yarn build:prod
 
-FROM nginx:1.20
+FROM nginx:stable-alpine
 COPY --from=build /opt/src/public /usr/share/nginx/html
