@@ -63,15 +63,30 @@ const config = {
       },
       {
         test: /\.png$/,
-        loader: 'url-loader?prefix=images/&limit=8000&mimetype=image/png'
+        loader: 'url-loader',
+        options: {
+          prefix: "images",
+          limit: 8000,
+          mimetype: "image/png"
+        }
       },
       {
         test: /\.jpg$/,
-        loader: 'url-loader?prefix=images/&limit=8000&mimetype=image/jpeg'
+        loader: 'url-loader',
+        options: {
+          prefix: "images",
+          limit: 8000,
+          mimetype: "image/jpeg"
+        }
       },
       {
         test: /\.gif$/,
-        loader: 'url-loader?prefix=images/&limit=8000&mimetype=image/gif'
+        loader: 'url-loader',
+        options: {
+          prefix: "images",
+          limit: 8000,
+          mimetype: "image/gif"
+        }
       },
       {
         test: /\.hbs$/,
@@ -93,9 +108,6 @@ const config = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': `'${process.env.NODE_ENV}'`
-    }),
     new DotenvPlugin({
       sample: './.env.example',
       path: (DEVELOPMENT) ? './.env.development' : './.env.production',
@@ -107,12 +119,14 @@ const config = {
       alwaysWriteToDisk: true,
     }),
     new CleanWebpackPlugin.CleanWebpackPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../src/static'),
-        to: 'static'
-      }
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../src/static'),
+          to: 'static'
+        }
+      ]
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: '[id].css'
@@ -125,15 +139,6 @@ if (DEVELOPMENT) {
   config.plugins = config.plugins.concat([
     new webpack.HotModuleReplacementPlugin()
   ])
-  config.plugins = config.plugins.concat([
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-      chunkFilename: '[id].css'
-    })
-  ])
-  config.optimization = {
-    minimizer: [new TerserPlugin()],
-  }
 } else {
   config.mode = 'production'
   config.plugins = config.plugins.concat([
@@ -144,7 +149,7 @@ if (DEVELOPMENT) {
   ])
   config.optimization = {
     minimizer: [new TerserPlugin()],
-    moduleIds: 'hashed',
+    moduleIds: 'deterministic',
   }
 }
 
