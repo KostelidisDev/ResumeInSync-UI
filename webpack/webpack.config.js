@@ -14,14 +14,14 @@ const NODE_ENV = process.env.NODE_ENV
 const DEVELOPMENT = (NODE_ENV === 'development')
 
 const config = {
-  devtool: (DEVELOPMENT) ? 'cheap-module-source-map' : 'false',
+  devtool: (DEVELOPMENT) ? 'cheap-module-source-map' : 'inline-source-map',
   entry: {
     app: [path.join(__dirname, '/../src/app/Index.js')]
   },
   output: {
     path: path.join(__dirname, './../public'),
     filename: 'js/[name].js',
-    chunkFilename: 'js/[name].bundle.js',
+    chunkFilename: 'js/[name].[contenthash].js',
     publicPath: '/'
   },
   resolve: {
@@ -125,6 +125,15 @@ if (DEVELOPMENT) {
   config.plugins = config.plugins.concat([
     new webpack.HotModuleReplacementPlugin()
   ])
+  config.plugins = config.plugins.concat([
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: '[id].css'
+    })
+  ])
+  config.optimization = {
+    minimizer: [new TerserPlugin()],
+  }
 } else {
   config.mode = 'production'
   config.plugins = config.plugins.concat([
@@ -135,8 +144,6 @@ if (DEVELOPMENT) {
   ])
   config.optimization = {
     minimizer: [new TerserPlugin()],
-    namedModules: true,
-    namedChunks: true,
     moduleIds: 'hashed',
   }
 }

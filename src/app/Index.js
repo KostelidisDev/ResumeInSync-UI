@@ -1,20 +1,22 @@
 // jQuery  Dependencies
-import 'jquery-validation'
-import 'popper.js'
+import('jquery-validation')
+import('popper.js')
 
 // Handlebars Dependencies
-import './util/HandlebarsUtil'
+import('./util/HandlebarsUtil')
 
 // Theme Dependencies
-import 'selectize'
-import 'bootstrap'
-import './../styles/Index.css'
+import('selectize')
+import('bootstrap')
 
-// Backbone.js Dependencies
-import 'backbone'
-import 'backbone.basicauth'
+import('./../styles/Index.css')
 
-import './ChannelLoader'
-import './ControllerLoader'
+// Backbone.js Dependencies (Lazy-loaded)
+import('backbone').then((Backbone) => {
+  import('backbone.basicauth').then(() => {
+    Backbone.history.start()
+  })
+})
 
-Backbone.history.start()
+import('./ChannelLoader')
+import('./ControllerLoader')
