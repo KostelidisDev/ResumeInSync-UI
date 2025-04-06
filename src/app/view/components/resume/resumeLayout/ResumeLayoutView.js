@@ -3,7 +3,6 @@
 import RISView from "../../../RISView"
 import ResumeDashboardTemplate from './ResumeLayoutTemplate.hbs'
 import ResumeSidebarView from "../resumeSidebar/ResumeSidebarView"
-import _ from 'underscore'
 
 const ResumeLayoutView = RISView.extend({
 

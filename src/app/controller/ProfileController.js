@@ -1,15 +1,13 @@
 'use strict'
 
-import Radio from "backbone.radio"
 import * as Channels from "../constants/channels/Channels"
-import $ from "jquery"
 import * as SecurityEvents from '../constants/channels/events/SecurityEvents'
 import * as HTTPMethods from "../constants/common/HTTPMethods"
 import APIConfig from "../config/APIConfig"
 import * as ProfileEvents from "../constants/channels/events/ProfileEvents"
 
-const SecurityChannel = Radio.channel(Channels.SECURITY)
-const profileChannel = Radio.channel(Channels.PROFILE)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
+const profileChannel = Backbone.Radio.channel(Channels.PROFILE)
 
 export const publish = () => {
   return Promise.resolve(

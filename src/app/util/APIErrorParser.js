@@ -1,7 +1,5 @@
 'use strict'
 
-import _ from 'underscore'
-
 export const parse = (errorObject) => {
   const { responseJSON } = errorObject
 

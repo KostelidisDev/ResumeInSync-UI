@@ -18,9 +18,9 @@ new WebpackDevServer(webpack(config), {
   https: (WEB_PROTOCOL === 'https'),
   publicPath: config.output.publicPath,
   host: WEB_IP,
-  stats: false,
+  stats: true,
   historyApiFallback: true,
-  contentBase: 'public',
+  contentBase: config.output.publicPath,
   compress: false,
   headers: {
     'Access-Control-Allow-Origin': '*'

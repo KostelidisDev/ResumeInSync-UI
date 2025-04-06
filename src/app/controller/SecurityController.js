@@ -9,12 +9,9 @@ import * as JWTFields from '../constants/auth/JWTFields'
 import * as Channels from '../constants/channels/Channels'
 import * as SecurityEvents from '../constants/channels/events/SecurityEvents'
 import * as HTTPMethods from '../constants/common/HTTPMethods'
-import _ from 'underscore'
-import Radio from 'backbone.radio'
-import $ from 'jquery'
 import Profile from "../model/api/Profile"
 
-const securityChannel = Radio.channel(Channels.SECURITY)
+const securityChannel = Backbone.Radio.channel(Channels.SECURITY)
 
 export const logout = () => {
   return Promise.resolve(

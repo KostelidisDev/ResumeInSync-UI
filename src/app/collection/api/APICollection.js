@@ -1,12 +1,10 @@
 'use strict'
 
 import BaseCollection from '../BaseCollection'
-import Radio from 'backbone.radio'
-import Backbone from 'backbone'
 import * as Channels from '../../constants/channels/Channels'
 import * as SecurityEvents from '../../constants/channels/events/SecurityEvents'
 
-const SecurityChannel = Radio.channel(Channels.SECURITY)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
 
 const APICollection = BaseCollection.extend({
 

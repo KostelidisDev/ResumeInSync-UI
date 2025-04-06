@@ -11,7 +11,6 @@ import 'bootstrap'
 import './../styles/Index.css'
 
 // Backbone.js Dependencies
-import 'backbone'
 import 'backbone.basicauth'
 
 import './ChannelLoader'

@@ -1,21 +1,20 @@
 'use strict'
 
 import RISView from '../../RISView'
-import Radio from "backbone.radio"
 import ResumesSingleTemplate from './ResumesSingleTemplate.hbs'
 import * as Channels from "../../../constants/channels/Channels"
 import * as ResumeEvents from "../../../constants/channels/events/ResumeEvents"
 import * as ProfileEvents from "../../../constants/channels/events/ProfileEvents"
 import Profile from "../../../model/api/Profile"
 import * as Languages from '../../../lang/Languages'
-import * as Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 const ResumesView = RISView.extend({
 
   template: ResumesSingleTemplate,
 
-  resumeChannel: new Radio.channel(Channels.RESUME),
-  profileChannel: new Radio.channel(Channels.PROFILE),
+  resumeChannel: new Backbone.Radio.channel(Channels.RESUME),
+  profileChannel: new Backbone.Radio.channel(Channels.PROFILE),
 
   regions: {
     'resumesSingleRegion': '.resumesSingleRegion'

@@ -5,11 +5,9 @@ import * as Channels from '../constants/channels/Channels'
 import * as SecurityEvents from '../constants/channels/events/SecurityEvents'
 import * as UserEvents from '../constants/channels/events/UserEvents'
 import BackEngConfig from '../config/APIConfig'
-import Radio from 'backbone.radio'
-import $ from 'jquery'
 
-const SecurityChannel = Radio.channel(Channels.SECURITY)
-const UserChannel = Radio.channel(Channels.USER)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
+const UserChannel = Backbone.Radio.channel(Channels.USER)
 
 const changePassword = (payload) => {
   if (payload.currentPassword === undefined) {

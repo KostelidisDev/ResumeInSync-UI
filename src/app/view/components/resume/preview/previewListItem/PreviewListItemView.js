@@ -3,14 +3,13 @@
 import PreviewListItemTemplate from "./PreviewListItemTemplate.hbs"
 import RISItemView from "../../../../RISItemView"
 import * as ResumeEvents from "../../../../../constants/channels/events/ResumeEvents"
-import Radio from "backbone.radio"
 import * as Channels from "../../../../../constants/channels/Channels"
 
 const PreviewListItemView = RISItemView.extend({
 
   template: PreviewListItemTemplate,
 
-  resumeChannel: new Radio.channel(Channels.RESUME),
+  resumeChannel: new Backbone.Radio.channel(Channels.RESUME),
 
   tagName: 'tr',
 

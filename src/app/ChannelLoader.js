@@ -1,11 +1,10 @@
 'use strict'
 
-import Radio from 'backbone.radio'
 import * as Channels from './constants/channels/Channels'
 
-Radio.tuneIn(Channels.SECURITY)
-Radio.tuneIn(Channels.USER)
-Radio.tuneIn(Channels.DASHBOARD)
-Radio.tuneIn(Channels.PROFILE)
-Radio.tuneIn(Channels.RESUME)
-Radio.tuneIn(Channels.LANGUAGE_PROFICIENCY)
+Backbone.Radio.tuneIn(Channels.SECURITY)
+Backbone.Radio.tuneIn(Channels.USER)
+Backbone.Radio.tuneIn(Channels.DASHBOARD)
+Backbone.Radio.tuneIn(Channels.PROFILE)
+Backbone.Radio.tuneIn(Channels.RESUME)
+Backbone.Radio.tuneIn(Channels.LANGUAGE_PROFICIENCY)

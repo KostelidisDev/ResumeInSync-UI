@@ -6,9 +6,7 @@ import { openModalForm } from "../../../../../util/ModalUtils"
 import * as Languages from "../../../../../lang/Languages"
 import LanguagesListItemView from "../languagesListItem/LanguagesListItemView"
 import LanguagesFormView from "../languagesForm/LanguagesFormView"
-import Radio from "backbone.radio"
 import * as Channels from "../../../../../constants/channels/Channels"
-import * as LanguageProficiencyEvents from "../../../../../constants/channels/events/LanguageProficiencyEvents"
 
 const LanguagesListView = RISViewCollection.extend({
 
@@ -22,7 +20,7 @@ const LanguagesListView = RISViewCollection.extend({
 
   childViewContainer: '.languageList',
 
-  languageProficiencyChannel: new Radio.channel(Channels.LANGUAGE_PROFICIENCY),
+  languageProficiencyChannel: new Backbone.Radio.channel(Channels.LANGUAGE_PROFICIENCY),
 
   events: {
     'click #add': 'add'

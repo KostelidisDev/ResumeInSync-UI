@@ -4,7 +4,6 @@ import NavigationBarTemplate from './NavigationBarListTemplate.hbs'
 import RISViewCollection from '../../../RISViewCollection'
 import NavigationBarItemView from '../navigationBarItem/NavigationBarItemView'
 import * as VisibilityOptions from '../../../../constants/navigationBar/VisibilityOptions'
-import _ from 'underscore'
 
 const NavigationBarListView = RISViewCollection.extend({
 

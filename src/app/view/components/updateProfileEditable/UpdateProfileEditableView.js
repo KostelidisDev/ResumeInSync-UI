@@ -2,7 +2,6 @@
 
 import RISView from '../../RISView'
 import UpdateProfileEditableTemplate from './UpdateProfileEditableTemplate.hbs'
-import Radio from 'backbone.radio'
 import * as Channels from '../../../constants/channels/Channels'
 import ProfileRules from '../../../constants/validationRules/ProfileRules'
 import * as Languages from '../../../lang/Languages'
@@ -31,7 +30,7 @@ const UpdateProfileEditableView = RISView.extend({
 
   updateProfileForm: '#updateProfileForm',
 
-  userChannel: Radio.channel(Channels.USER),
+  userChannel: Backbone.Radio.channel(Channels.USER),
 
   onRender() {
     this.showChildView('firstNameRegion', new FormFieldView({

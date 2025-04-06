@@ -5,7 +5,6 @@ import RISView from '../../RISView'
 import NavigationBarListView from './navigationBarList/NavigationBarListView'
 import NavigationBarCollection from '../../../collection/local/NavigationBarCollection'
 import NavigationBarItems from '../../../constants/navigationBar/NavigationBarItems'
-import _ from 'underscore'
 
 const NavigationBarView = RISView.extend({
 

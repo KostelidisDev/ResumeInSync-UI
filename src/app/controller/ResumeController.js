@@ -1,9 +1,7 @@
 'use strict'
 
 import { saveAs } from "file-saver"
-import Radio from "backbone.radio"
 import * as Channels from "../constants/channels/Channels"
-import $ from "jquery"
 import * as SecurityEvents from '../constants/channels/events/SecurityEvents'
 import * as HTTPMethods from "../constants/common/HTTPMethods"
 import APIConfig from "../config/APIConfig"
@@ -11,8 +9,8 @@ import * as ResumeEvents from "../constants/channels/events/ResumeEvents"
 import * as Languages from "../lang/Languages"
 import Swal from "sweetalert2"
 
-const SecurityChannel = Radio.channel(Channels.SECURITY)
-const resumeChannel = Radio.channel(Channels.RESUME)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
+const resumeChannel = Backbone.Radio.channel(Channels.RESUME)
 
 export const downloadPdf = (profile) => {
   if (profile?.attributes?.user === undefined) {
@@ -38,7 +36,7 @@ export const downloadPdf = (profile) => {
 }
 
 export const downloadJson = (profile) => {
-  if (profile?.attributes?.user == undefined) {
+  if (profile?.attributes?.user === undefined) {
     return Promise.reject("ERROR")
   }
   const { attributes: { user: { id: userId } } } = profile
@@ -60,7 +58,7 @@ export const downloadJson = (profile) => {
 }
 
 export const downloadHtml = (profile) => {
-  if (profile?.attributes?.user == undefined) {
+  if (profile?.attributes?.user === undefined) {
     return Promise.reject("ERROR")
   }
   const { attributes: { user: { id: userId } } } = profile
@@ -80,7 +78,7 @@ export const downloadHtml = (profile) => {
 }
 
 export const getHtmlIFrame = (profile) => {
-  if (profile?.attributes?.user == undefined) {
+  if (profile?.attributes?.user === undefined) {
     return Promise.reject("ERROR")
   }
   const { attributes: { user: { id: userId } } } = profile
@@ -234,11 +232,9 @@ const languageGenerator = () => {
     }
     case 'EL': {
       return 'greek'
-      break
     }
     default: {
       return 'english'
-      break
     }
   }
 }

@@ -3,7 +3,6 @@
 import EN from './English'
 import EL from './Ellinika'
 import LocalStorageController from './../controller/LocalStorageController'
-import _ from 'underscore'
 import Language from '../config/LanguageConfig'
 
 const SupportedLanguages = new Map()

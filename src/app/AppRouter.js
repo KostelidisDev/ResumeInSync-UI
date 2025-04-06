@@ -1,14 +1,9 @@
-import $ from 'jquery'
-import Backbone from 'backbone'
-import Radio from 'backbone.radio'
 import * as Channels from './constants/channels/Channels'
 import * as SecurityEvents from './constants/channels/events/SecurityEvents'
-import _ from 'underscore'
 import LiveData from './LiveData'
 import ResumeView from "./view/container/resume/ResumeView"
 
-
-const SecurityChannel = Radio.channel(Channels.SECURITY)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
 
 const AppRouter = Backbone.Router.extend({
   routes: {
@@ -82,7 +77,6 @@ const AppRouter = Backbone.Router.extend({
         }
 
         Backbone.Router.prototype.execute.call(this, callback, args, name)
-        return
       })
   },
 

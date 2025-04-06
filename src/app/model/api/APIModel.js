@@ -1,12 +1,10 @@
 'use strict'
 
 import BaseModel from '../BaseModel'
-import Radio from 'backbone.radio'
 import * as Channels from '../../constants/channels/Channels'
 import * as SecurityEvents from '../../constants/channels/events/SecurityEvents'
-import * as Backbone from 'backbone'
 
-const SecurityChannel = Radio.channel(Channels.SECURITY)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
 
 const APIModel = BaseModel.extend({
 

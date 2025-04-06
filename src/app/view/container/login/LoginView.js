@@ -2,13 +2,12 @@
 
 import RISView from '../../RISView'
 import RegisterTemplate from './LoginTemplate.hbs'
-import Radio from 'backbone.radio'
 import * as Channels from '../../../constants/channels/Channels'
 import * as SecurityEvents from '../../../constants/channels/events/SecurityEvents'
 import LiveData from '../../../LiveData'
 import * as Languages from '../../../lang/Languages'
 import AuthRules from '../../../constants/validationRules/AuthRules'
-import * as Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 const LoginView = RISView.extend({
 
@@ -21,7 +20,7 @@ const LoginView = RISView.extend({
 
   loginForm: '#loginForm',
 
-  securityChannel: Radio.channel(Channels.SECURITY),
+  securityChannel: Backbone.Radio.channel(Channels.SECURITY),
 
   onRender() {
     this.addFormValidation()
@@ -37,7 +36,7 @@ const LoginView = RISView.extend({
     return Promise.resolve(this.serialize())
       .then(userCredentials => this.securityChannel.request(SecurityEvents.LOGIN, userCredentials))
       .then(() => LiveData.router.navigate('#/resume', { trigger: true }))
-      .catch(error => Swal.fire(
+      .catch(() => Swal.fire(
         Languages.resolveKey('auth.error.cant.title'),
         Languages.resolveKey('auth.error.cant.body'),
         'error'

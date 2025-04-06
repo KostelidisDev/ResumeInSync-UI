@@ -1,7 +1,5 @@
 'use strict'
 
-import _ from 'underscore'
-
 export default ({
   getByKey(key) {
     return window.localStorage.getItem(key)

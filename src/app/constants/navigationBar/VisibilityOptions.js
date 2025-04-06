@@ -1,11 +1,10 @@
 'use strict'
 
 import * as Roles from '../auth/Roles'
-import Radio from 'backbone.radio'
 import * as Channels from '../channels/Channels'
 import * as SecurityEvents from '../channels/events/SecurityEvents'
 
-const SecurityChannel = Radio.channel(Channels.SECURITY)
+const SecurityChannel = Backbone.Radio.channel(Channels.SECURITY)
 
 export const ALL = Object.freeze('ALL')
 export const GUEST = Object.freeze('GUEST')

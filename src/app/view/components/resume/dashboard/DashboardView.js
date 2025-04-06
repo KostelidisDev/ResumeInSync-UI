@@ -2,7 +2,6 @@
 
 import RISView from "../../../RISView"
 import DashboardTemplate from './DashboardTemplate.hbs'
-import Radio from "backbone.radio"
 import * as Channels from "../../../../constants/channels/Channels"
 import * as DashboardEvents from '../../../../constants/channels/events/DashboardEvents'
 import ProfileView from "./profile/ProfileView"
@@ -20,9 +19,9 @@ const DashboardView = RISView.extend({
 
   template: DashboardTemplate,
 
-  dashboardChannel: new Radio.channel(Channels.DASHBOARD),
-  resumeChannel: new Radio.channel(Channels.RESUME),
-  securityChannel: new Radio.channel(Channels.SECURITY),
+  dashboardChannel: new Backbone.Radio.channel(Channels.DASHBOARD),
+  resumeChannel: new Backbone.Radio.channel(Channels.RESUME),
+  securityChannel: new Backbone.Radio.channel(Channels.SECURITY),
 
   events: {
     'click #downloadPdf': 'downloadPdf',

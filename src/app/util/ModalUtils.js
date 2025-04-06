@@ -1,5 +1,5 @@
 import * as Bootbox from "bootbox.js/bootbox"
-import * as Swal from "sweetalert2"
+import Swal from "sweetalert2"
 
 export const openModalForm = (formClass,
   passData,

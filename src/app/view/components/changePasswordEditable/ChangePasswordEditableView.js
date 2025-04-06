@@ -2,12 +2,11 @@
 
 import RISView from '../../RISView'
 import ChangePasswordTemplate from './ChangePasswordEditableTemplate.hbs'
-import Radio from 'backbone.radio'
 import * as Channels from '../../../constants/channels/Channels'
 import * as UserEvents from '../../../constants/channels/events/UserEvents'
 import AuthConstants from '../../../constants/validationRules/AuthRules'
 import * as Languages from '../../../lang/Languages'
-import * as Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import FormFieldView from "../formField/FormFieldView"
 
 const ChangePasswordEditableView = RISView.extend({
@@ -25,7 +24,7 @@ const ChangePasswordEditableView = RISView.extend({
 
   changePasswordForm: '#changePasswordForm',
 
-  userChannel: Radio.channel(Channels.USER),
+  userChannel: Backbone.Radio.channel(Channels.USER),
 
   onRender() {
     this.showChildView('currentPasswordRegion', new FormFieldView({

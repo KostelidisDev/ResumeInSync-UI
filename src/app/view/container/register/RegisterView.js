@@ -4,7 +4,6 @@ import RISView from '../../RISView'
 import RegisterTemplate from './RegisterTemplate.hbs'
 import * as Channels from '../../../constants/channels/Channels'
 import * as SecurityEvents from '../../../constants/channels/events/SecurityEvents'
-import Radio from 'backbone.radio'
 import LiveData from '../../../LiveData'
 import AuthRules from '../../../constants/validationRules/AuthRules'
 import * as Languages from '../../../lang/Languages'
@@ -13,7 +12,7 @@ const RegisterView = RISView.extend({
 
   template: RegisterTemplate,
 
-  securityChannel: new Radio.channel(Channels.SECURITY),
+  securityChannel: new Backbone.Radio.channel(Channels.SECURITY),
 
   events: {
     'submit #registerForm': 'register',

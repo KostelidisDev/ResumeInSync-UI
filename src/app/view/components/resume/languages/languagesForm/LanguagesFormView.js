@@ -5,7 +5,6 @@ import RISView from "../../../../RISView"
 import languagesRules from "../../../../../constants/validationRules/LanguagesRules"
 import * as Languages from "../../../../../lang/Languages"
 import Language from "../../../../../model/api/Language"
-import Radio from "backbone.radio"
 import * as Channels from "../../../../../constants/channels/Channels"
 import * as LanguageProficiencyEvents from "../../../../../constants/channels/events/LanguageProficiencyEvents"
 
@@ -15,7 +14,7 @@ const LanguagesFormView = RISView.extend({
 
   workingForm: '#languageForm',
 
-  languageProficiencyChannel: new Radio.channel(Channels.LANGUAGE_PROFICIENCY),
+  languageProficiencyChannel: new Backbone.Radio.channel(Channels.LANGUAGE_PROFICIENCY),
 
   onRender() {
     this.addFormValidation()

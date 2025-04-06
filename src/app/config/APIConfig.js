@@ -1,7 +1,5 @@
 'use strict'
 
-import _ from "underscore"
-
 const API_PROTOCOL = process.env.API_APP_PROTOCOL
 const API_IP = process.env.API_APP_IP
 const API_PORT = process.env.API_APP_PORT
